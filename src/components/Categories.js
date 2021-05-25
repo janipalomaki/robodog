@@ -14,57 +14,19 @@ export default function Categories ( { navigation }) {
             <PaperProvider>
                 <Card
                 style={styles.kortti}
-                onPress={ () => navigation.navigate("Movies", 
-                { kategoria : "now_playing" })}
+                onPress={ () => navigation.navigate("News", 
+                { kategoria : "news" })}
                 >
                     <Card.Content>
                         <Title
                         style={styles.otsikko}
-                        >Now playing</Title>
+                        >News</Title>
                     </Card.Content>
-                    <Card.Cover source={{ uri: 'https://image.tmdb.org/t/p/w500' + '/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg' }} />
+                    <Card.Cover source={{ uri: 'https://image.jpg' }} />
                     
                 </Card>
-
-                <Card
-                style={styles.kortti}
-                onPress={ () => navigation.navigate("Movies", 
-                { kategoria : "popular" })}
-                >
-                    <Card.Content>
-                        <Title
-                        style={styles.otsikko}
-                        >Popular</Title>
-                    </Card.Content>
-                    <Card.Cover source={{ uri: 'https://image.tmdb.org/t/p/w500' + '/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg' }} />
-                </Card>
-
-                <Card
-                style={styles.kortti}
-                onPress={ () => navigation.navigate("Movies", 
-                { kategoria : "top_rated" })}
-                >
-                    <Card.Content>
-                        <Title
-                        style={styles.otsikko}
-                        >Top rated</Title>
-                    </Card.Content>
-                    <Card.Cover source={{ uri: 'https://image.tmdb.org/t/p/w500' + '/2CAL2433ZeIihfX1Hb2139CX0pW.jpg' }} />
-                </Card>
-
-                <Card
-                style={styles.kortti}
-                onPress={ () => navigation.navigate("Movies", 
-                { kategoria : "upcoming" })}
-                >
-                    <Card.Content>
-                        <Title
-                        style={styles.otsikko}
-                        >Upcoming</Title>
-                    </Card.Content>
-                    <Card.Cover source={{ uri: 'https://image.tmdb.org/t/p/w500' + '/lPsD10PP4rgUGiGR4CCXA6iY0QQ.jpg' }} />
-                </Card>
-                <Text style={styles.attribute}>Copyright 2021 Jani Palomäki. Film data from TMDb</Text>
+                
+                <Text style={styles.attribute}>Copyright 2021 Jani Palomäki. News data from CryptoCompare</Text>
             </PaperProvider>
         </ScrollView>
 

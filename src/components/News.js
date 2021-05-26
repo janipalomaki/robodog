@@ -3,16 +3,15 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
 
 // React Native Paper
-import { Provider as PaperProvider, Card, Title } from 'react-native-paper';
+import { Provider as PaperProvider, Card, Title, Paragraph } from 'react-native-paper';
 import { ActivityIndicator, Text } from 'react-native-paper';
 
-export default function news ({ route, navigation }) {
+
+export default function News ({ route, navigation }) {
 
    // const {category} = route.params;
 
-
-
-    // Elokuvadata
+    // Data
     const [data, setData] = useState({
         news : [],
         error : null,
@@ -23,7 +22,7 @@ export default function news ({ route, navigation }) {
 
         try {
 
-            const api_key = "";
+            const api_key = "0cf095c12b7639ad92274f04283c0656b9de84011c92f159307a940d570ab0e7";
             const base_url = "https://min-api.cryptocompare.com/data/v2/news/?lang=EN";
             const url = base_url + '&api_key=' + api_key;
             const response = await fetch(url);
@@ -64,8 +63,8 @@ export default function news ({ route, navigation }) {
                         <Card
                         style={styles.kortti}
                         onPress={ () => navigation.navigate("Details",
-                        { // Viedään tiedot --> "Uutisentiedot"
-                            id : uutinen.id
+                        { // Viedään tiedot --> "Details"
+                            url : uutinen.url
                         }
                         )}
                         key={idx}
@@ -74,6 +73,7 @@ export default function news ({ route, navigation }) {
                                 <Title
                                 style={styles.otsikko}
                                 >{uutinen.title}</Title>
+                                <Paragraph>{uutinen.body}</Paragraph>
                             </Card.Content>
                             <Card.Cover source={{ uri: uutinen.imageurl }} />
                         </Card>

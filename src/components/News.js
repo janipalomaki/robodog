@@ -22,7 +22,7 @@ export default function News ({ route, navigation }) {
 
         try {
 
-            const api_key = "0cf095c12b7639ad92274f04283c0656b9de84011c92f159307a940d570ab0e7";
+            const api_key = "0cf095c12b7639b0e7";
             const base_url = "https://min-api.cryptocompare.com/data/v2/news/?lang=EN";
             const url = base_url + '&api_key=' + api_key;
             const response = await fetch(url);

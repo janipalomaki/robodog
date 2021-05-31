@@ -6,7 +6,7 @@ import { StyleSheet, ScrollView } from 'react-native';
 import { Provider as PaperProvider, Card, Title, Text } from 'react-native-paper';
 
 
-export default function Categories ( { navigation }) {
+export default function Home ( { navigation }) {
 
     return(
         
@@ -14,8 +14,32 @@ export default function Categories ( { navigation }) {
             <PaperProvider>
                 <Card
                 style={styles.kortti}
-                onPress={ () => navigation.navigate("News", 
-                { kategoria : "news" })}
+                onPress={ () => navigation.navigate("")}
+                >
+                    <Card.Content>
+                        <Title
+                        style={styles.otsikko}
+                        >Market</Title>
+                    </Card.Content>
+                    
+                </Card>
+
+                <Card
+                style={styles.kortti}
+                onPress={ () => navigation.navigate("")}
+                >
+                    <Card.Content>
+                        <Title
+                        style={styles.otsikko}
+                        >Market Sentiment</Title>
+                    </Card.Content>
+                    <Card.Cover source={{ uri: 'https://alternative.me/crypto/fear-and-greed-index.png' }} />
+                    
+                </Card>
+
+                <Card
+                style={styles.kortti}
+                onPress={ () => navigation.navigate("News")}
                 >
                     <Card.Content>
                         <Title
@@ -26,7 +50,7 @@ export default function Categories ( { navigation }) {
                     
                 </Card>
                 
-                <Text style={styles.attribute}>Copyright 2021 Jani Palomäki. News data from CryptoCompare</Text>
+                <Text style={styles.attribute}>Copyright 2021 Jani Palomäki. Data from CryptoCompare and Alternative </Text>
             </PaperProvider>
         </ScrollView>
 

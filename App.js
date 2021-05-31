@@ -8,7 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { StyleSheet} from 'react-native';
 
 // Components
-import Categories from "./src/components/Categories";
+import Home from "./src/components/Home";
 import News from "./src/components/News";
 import Details from "./src/components/Details";
 
@@ -32,12 +32,12 @@ export default function App() {
     <NavigationContainer>
 
       <Stack.Navigator 
-      initialRouteName="News"
+      initialRouteName="Home"
       screenOptions={{
         header: (props) => <CustomNavigationBar {...props} />,
       }}
       >
-        <Stack.Screen name="Categories" component={Categories} />
+        <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="News" component={News} />
         <Stack.Screen name="Details" component={Details} />
       </Stack.Navigator>

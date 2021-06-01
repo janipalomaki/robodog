@@ -1,6 +1,7 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 
-import { StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
 
 // React Native Paper
 import { Provider as PaperProvider, Card, Title, Text } from 'react-native-paper';
@@ -8,9 +9,53 @@ import { Provider as PaperProvider, Card, Title, Text } from 'react-native-paper
 
 export default function Home ( { navigation }) {
 
+    // Get Alternative API -data 
+    const [marketSentimentData, setMarketSentimentData] = useState({
+        data : [],
+        error : null,
+        dataReady : false
+    });
+
+    // Get market sentiment from alternative 
+    const getMarketSentimentData = async () => {
+
+        try {
+
+            const api_key = "";
+            const base_url = "";
+            const url = base_url + '?api_key='+ api_key;
+            const response = await fetch(url);
+            const data = await response.json();
+
+            setData({
+                ...data,
+                tiedot : data,
+                tiedotHaettu : true
+            });
+
+
+        } catch (e) {
+
+            setData({
+                ...data,
+                virhe : `Palvelimeen ei saatu yhteyttä ${e.message}`,
+                tiedotHaettu : true
+            });
+        }
+    }
+
+    useEffect(() => {
+        getMarketSentimentData();
+    }, []);
+
     return(
         
         <ScrollView>
+
+
+
+            {(marketSentimentData)
+            ?
             <PaperProvider>
                 <Card
                 style={styles.kortti}
@@ -33,7 +78,7 @@ export default function Home ( { navigation }) {
                         style={styles.otsikko}
                         >Market Sentiment</Title>
                     </Card.Content>
-                    <Card.Cover source={{ uri: 'https://alternative.me/crypto/fear-and-greed-index.png' }} />
+                    <Card.Cover source={{ uri: "https://alternative.me/crypto/fear-and-greed-index.png" }} />
                     
                 </Card>
 
@@ -46,12 +91,18 @@ export default function Home ( { navigation }) {
                         style={styles.otsikko}
                         >News</Title>
                     </Card.Content>
-                    <Card.Cover source={{ uri: 'https://image.jpg' }} />
+                    <Card.Cover source={{ uri: "" }} />
                     
                 </Card>
                 
                 <Text style={styles.attribute}>Copyright 2021 Jani Palomäki. Data from CryptoCompare and Alternative </Text>
             </PaperProvider>
+
+            :<ActivityIndicator
+            size="large"
+            animating={true}
+            />
+            }
         </ScrollView>
 
     )

@@ -51,7 +51,7 @@ export default function MarketSentiment ({ route, navigation }) {
     }, []); //category
 
 
-console.log(data.data);
+//console.log(data.data);
 
     return(
 

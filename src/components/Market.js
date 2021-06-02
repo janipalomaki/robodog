@@ -12,13 +12,13 @@ export default function Market ({ route, navigation }) {
    // const {category} = route.params;
 
     // Data
-    const [data, setData] = useState({
-        news : [],
+    const [marketData, setMarketData] = useState({
+        data : [],
         error : null,
         dataReady: false
     });
 
-    const getMarketSentiment = async () => {
+    const getMarketData = async () => {
 
         try {
 
@@ -28,7 +28,7 @@ export default function Market ({ route, navigation }) {
             const response = await fetch(url);
             const data = await response.json();
 
-            setData({
+            setMarketData({
                 ...data,
                 name : data.name,
                 data : data.data,
@@ -38,7 +38,7 @@ export default function Market ({ route, navigation }) {
 
         } catch (e) {
 
-            setData({
+            setMarketData({
                 ...data,
                 error : `Cannot connect to the server ${e.message}`,
                 dataReady : true
@@ -47,11 +47,11 @@ export default function Market ({ route, navigation }) {
     }
 
     useEffect(() => {
-        getMarketSentiment();
+        getMarketData();
     }, []); //category
 
 
-console.log(data.data);
+//console.log(data.data);
 
     return(
 

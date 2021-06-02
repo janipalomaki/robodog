@@ -1,10 +1,9 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import { StyleSheet, ScrollView} from 'react-native';
 
 // React Native Paper
 import { Provider as PaperProvider, Card, Title, Text } from 'react-native-paper';
-
 
 export default function Home ( { navigation }) {
 
@@ -13,6 +12,7 @@ export default function Home ( { navigation }) {
         
         <ScrollView>
             <PaperProvider>
+
                 <Card
                 style={styles.kortti}
                 onPress={ () => navigation.navigate("Market")}
@@ -22,9 +22,11 @@ export default function Home ( { navigation }) {
                         style={styles.otsikko}
                         >Market</Title>
                     </Card.Content>
+                    <Card.Cover source={{ uri: "https://www.newsbtc.com/wp-content/uploads/2018/10/fomo2-flat.jpg" }} />
                     
                 </Card>
 
+            
                 <Card
                 style={styles.kortti}
                 onPress={ () => navigation.navigate("MarketSentiment")}
@@ -38,6 +40,7 @@ export default function Home ( { navigation }) {
                     
                 </Card>
 
+
                 <Card
                 style={styles.kortti}
                 onPress={ () => navigation.navigate("News")}
@@ -47,9 +50,9 @@ export default function Home ( { navigation }) {
                         style={styles.otsikko}
                         >News</Title>
                     </Card.Content>
-                    <Card.Cover source={{ uri: "" }} />
-                    
+                    <Card.Cover source={{ uri: "https://images.cryptocompare.com/news/default/cryptopotato.png" }} />
                 </Card>
+    
                 
                 <Text style={styles.attribute}>Copyright 2021 Jani Palomäki. Data from CryptoCompare and Alternative </Text>
             </PaperProvider>

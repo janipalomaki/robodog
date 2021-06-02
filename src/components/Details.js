@@ -15,7 +15,7 @@ export default function Details ({ route, navigation }) {
     const {url} = route.params;
 
     
-console.log(url);
+//console.log(url);
 
     return(
 

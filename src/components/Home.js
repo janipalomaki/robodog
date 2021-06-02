@@ -1,7 +1,6 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 
-import { StyleSheet, ScrollView, ActivityIndicator } from 'react-native';
+import { StyleSheet, ScrollView} from 'react-native';
 
 // React Native Paper
 import { Provider as PaperProvider, Card, Title, Text } from 'react-native-paper';
@@ -9,57 +8,14 @@ import { Provider as PaperProvider, Card, Title, Text } from 'react-native-paper
 
 export default function Home ( { navigation }) {
 
-    // Get Alternative API -data 
-    const [marketSentimentData, setMarketSentimentData] = useState({
-        data : [],
-        error : null,
-        dataReady : false
-    });
-
-    // Get market sentiment from alternative 
-    const getMarketSentimentData = async () => {
-
-        try {
-
-            const api_key = "";
-            const base_url = "";
-            const url = base_url + '?api_key='+ api_key;
-            const response = await fetch(url);
-            const data = await response.json();
-
-            setData({
-                ...data,
-                tiedot : data,
-                tiedotHaettu : true
-            });
-
-
-        } catch (e) {
-
-            setData({
-                ...data,
-                virhe : `Palvelimeen ei saatu yhteyttä ${e.message}`,
-                tiedotHaettu : true
-            });
-        }
-    }
-
-    useEffect(() => {
-        getMarketSentimentData();
-    }, []);
 
     return(
         
         <ScrollView>
-
-
-
-            {(marketSentimentData)
-            ?
             <PaperProvider>
                 <Card
                 style={styles.kortti}
-                onPress={ () => navigation.navigate("")}
+                onPress={ () => navigation.navigate("Market")}
                 >
                     <Card.Content>
                         <Title
@@ -71,7 +27,7 @@ export default function Home ( { navigation }) {
 
                 <Card
                 style={styles.kortti}
-                onPress={ () => navigation.navigate("")}
+                onPress={ () => navigation.navigate("MarketSentiment")}
                 >
                     <Card.Content>
                         <Title
@@ -97,12 +53,6 @@ export default function Home ( { navigation }) {
                 
                 <Text style={styles.attribute}>Copyright 2021 Jani Palomäki. Data from CryptoCompare and Alternative </Text>
             </PaperProvider>
-
-            :<ActivityIndicator
-            size="large"
-            animating={true}
-            />
-            }
         </ScrollView>
 
     )

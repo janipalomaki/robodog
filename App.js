@@ -9,8 +9,11 @@ import { StyleSheet} from 'react-native';
 
 // Components
 import Home from "./src/components/Home";
+import Market from "./src/components/Market";
+import MarketSentiment from "./src/components/MarketSentiment";
 import News from "./src/components/News";
 import Details from "./src/components/Details";
+
 
 const Stack = createStackNavigator();
 
@@ -38,8 +41,11 @@ export default function App() {
       }}
       >
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Market" component={Market} />
+        <Stack.Screen name="MarketSentiment" component={MarketSentiment} />
         <Stack.Screen name="News" component={News} />
         <Stack.Screen name="Details" component={Details} />
+        
       </Stack.Navigator>
 
     </NavigationContainer>

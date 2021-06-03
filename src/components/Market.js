@@ -51,7 +51,6 @@ export default function Market ({ route, navigation }) {
     }, []); //category
 
 
-//console.log(data.data);
 
     return(
 
@@ -59,8 +58,8 @@ export default function Market ({ route, navigation }) {
             <PaperProvider>
 
 
-                {(data.dataReady)
-                ? <Text>{JSON.stringify(data.data)}</Text>
+                {(marketData.dataReady)
+                ? <Text>{JSON.stringify(marketData.data)}</Text>
            
             /*
                 

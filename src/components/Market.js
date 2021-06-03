@@ -30,7 +30,7 @@ export default function Market ({ route, navigation }) {
 
             setMarketData({
                 ...data,
-                name : data.name,
+                error : null,
                 data : data.data,
                 dataReady : true
             });
@@ -51,27 +51,31 @@ export default function Market ({ route, navigation }) {
     }, []); //category
 
 
+    //--- Create list from cryptocurrencies ---
+    const currencies = [];
+    for (const property in marketData.data) {
+        currencies.push({
+            currency : marketData.data[property]
+        })
+    }
+    //-----
+
+    console.log(currencies);
 
     return(
 
         <ScrollView>
             <PaperProvider>
 
-
                 {(marketData.dataReady)
-                ? <Text>{JSON.stringify(marketData.data)}</Text>
-           
-            /*
-                
-           
-                data.data.map((uutinen, idx) => {
+                ? currencies.map((currency, idx) => {
 
                 return (
                         <Card
                         style={styles.kortti}
-                        onPress={ () => navigation.navigate("Details",
+                        onPress={ () => navigation.navigate("",
                         { // Viedään tiedot --> "Details"
-                            url : uutinen.url
+                            //url : uutinen.url
                         }
                         )}
                         key={idx}
@@ -79,15 +83,12 @@ export default function Market ({ route, navigation }) {
                             <Card.Content>
                                 <Title
                                 style={styles.otsikko}
-                                >{uutinen.title}</Title>
-                                <Paragraph>{uutinen.body}</Paragraph>
+                                >{currency.currency.name}</Title>
+                                <Paragraph>{currency.currency.quotes.USD.price}</Paragraph>
                             </Card.Content>
-                            <Card.Cover source={{ uri: uutinen.imageurl }} />
                         </Card>
                     )    
                 })
-
-                    */
                 :<ActivityIndicator 
                 style={styles.lataus}
                 size="large"

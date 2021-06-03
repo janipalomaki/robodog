@@ -51,7 +51,7 @@ export default function Market ({ route, navigation }) {
     }, []); //category
 
 
-    //--- Create list from cryptocurrencies ---
+    //--- Create cryptocurrencies list ---
     const currencies = [];
     for (const property in marketData.data) {
         currencies.push({
@@ -83,7 +83,8 @@ export default function Market ({ route, navigation }) {
                             <Card.Content>
                                 <Title
                                 style={styles.otsikko}
-                                >{currency.currency.name}</Title>
+                                >{currency.currency.rank}. {currency.currency.name}</Title>
+                                 <Paragraph></Paragraph>
                                 <Paragraph>{currency.currency.quotes.USD.price}</Paragraph>
                             </Card.Content>
                         </Card>

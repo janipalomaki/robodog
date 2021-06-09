@@ -22,7 +22,7 @@ export default function Home ( { navigation }) {
                         style={styles.otsikko}
                         >Market</Title>
                     </Card.Content>
-                    <Card.Cover source={{ uri: "https://www.newsbtc.com/wp-content/uploads/2018/10/fomo2-flat.jpg" }} />
+                    <Card.Cover source={require ('../img/market.png') } />
                     
                 </Card>
 
@@ -36,7 +36,7 @@ export default function Home ( { navigation }) {
                         style={styles.otsikko}
                         >Market Sentiment</Title>
                     </Card.Content>
-                    <Card.Cover source={{ uri: "https://alternative.me/crypto/fear-and-greed-index.png" }} />
+                    <Card.Cover source={require ('../img/marketsentiment.png') } />
                     
                 </Card>
 
@@ -50,7 +50,7 @@ export default function Home ( { navigation }) {
                         style={styles.otsikko}
                         >News</Title>
                     </Card.Content>
-                    <Card.Cover source={{ uri: "https://images.cryptocompare.com/news/default/cryptopotato.png" }} />
+                    <Card.Cover source={require ('../img/news.png') } />
                 </Card>
     
                 

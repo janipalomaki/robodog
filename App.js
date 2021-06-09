@@ -14,7 +14,6 @@ import MarketSentiment from "./src/components/MarketSentiment";
 import News from "./src/components/News";
 import Details from "./src/components/Details";
 
-
 const Stack = createStackNavigator();
 
 import { Appbar } from 'react-native-paper';

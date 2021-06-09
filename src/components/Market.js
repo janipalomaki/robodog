@@ -6,6 +6,9 @@ import { StyleSheet, ScrollView } from 'react-native';
 import { Provider as PaperProvider, Card, Title, Paragraph } from 'react-native-paper';
 import { ActivityIndicator, Text } from 'react-native-paper';
 
+// Native base
+import { Container, Header, Content, List, ListItem, Left, Body, Right, Thumbnail} from 'native-base'
+
 
 export default function Market ({ route, navigation }) {
 
@@ -62,6 +65,57 @@ export default function Market ({ route, navigation }) {
 
     console.log(currencies);
 
+
+    return(
+
+       <Container>
+           <Content>
+               <List>
+                    {(marketData.dataReady)
+                    ? currencies.map((currency, idx) => {
+
+                    return (
+                            <ListItem avatar
+                            onPress={ () => navigation.navigate("",
+                            { // Viedään tiedot --> "Details"
+                                //url : uutinen.url
+                            }
+                            )}
+                            key={idx}
+                            >
+                                <Left>
+                                    <Text>{currency.currency.rank}.</Text>
+                                </Left>
+                                <Body>
+                                    <Text>{currency.currency.symbol}</Text>
+                                    <Text>{currency.currency.name}</Text>
+                                </Body>
+                                <Right>
+                                    <Text>{currency.currency.quotes.USD.price}</Text>
+                                    <Text note>{(currency.currency.quotes.USD.percent_change_24h).toFixed(2)} %</Text>
+                                </Right>
+        
+                            </ListItem>
+                        )    
+                    })
+                    :<ActivityIndicator 
+                    style={styles.lataus}
+                    size="large"
+                    animating={true} 
+                    />
+                    }
+                </List>
+            </Content>
+        </Container>
+
+        
+    )
+
+
+
+
+    // React Native Paper 
+    /*
     return(
 
         <ScrollView>
@@ -103,6 +157,12 @@ export default function Market ({ route, navigation }) {
 
         
     )
+    */
+
+
+
+
+
 
 }
 

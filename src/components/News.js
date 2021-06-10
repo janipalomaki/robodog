@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
-import { StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet, ScrollView, Image } from 'react-native';
 
 // React Native Paper
-import { Provider as PaperProvider, Card, Title, Paragraph } from 'react-native-paper';
 import { ActivityIndicator, Text } from 'react-native-paper';
+
+// Native base
+import { Container, Content, List, ListItem, Left, Body, Thumbnail} from 'native-base'
+
+// Moment.js
+import moment from 'moment';
 
 
 export default function News ({ route, navigation }) {
@@ -50,69 +55,68 @@ export default function News ({ route, navigation }) {
     }, []); //category
 
 
-//console.log(data.news);
 
     return(
 
-        <ScrollView>
-            <PaperProvider>
+        <Container>
+            <Content>
+                <List>
                 {(data.dataReady)
                 ? data.news.map((uutinen, idx) => {
+                   
+                    let time = moment(uutinen.published_on * 1000).fromNow();
 
                 return (
-                        <Card
-                        style={styles.kortti}
-                        onPress={ () => navigation.navigate("Details",
+
+                    <ListItem 
+                    thumbnail
+                    onPress={ () => navigation.navigate("Details",
                         { // Viedään tiedot --> "Details"
                             url : uutinen.url
                         }
                         )}
                         key={idx}
-                        >
-                            <Card.Content>
-                                <Title
-                                style={styles.otsikko}
-                                >{uutinen.title}</Title>
-                                <Paragraph>{uutinen.body}</Paragraph>
-                            </Card.Content>
-                            <Card.Cover source={{ uri: uutinen.imageurl }} />
-                        </Card>
-                    )    
+                    >
+                        <Left>
+                            <Thumbnail square source={{ uri: uutinen.imageurl }} />
+                        </Left>
+                        <Body>
+                            <Text style={styles.source}>{uutinen.source_info.name}</Text>
+                            <Text style={styles.header}>{uutinen.title}</Text> 
+                            <Text style={styles.time}>{time}</Text> 
+                        </Body>
+                    </ListItem>
+                    ) 
+
                 })
                 :<ActivityIndicator 
-                style={styles.lataus}
+                style={styles.loading}
                 size="large"
                 animating={true} 
                  />
             }
-            </PaperProvider>
-        </ScrollView>
-
-        
+            </List>
+            </Content>
+        </Container>
     )
-
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
+    source : {
+        fontWeight : "bold",
+        fontSize : 18
     },
-    kortti : {
-        padding : 3,
-        margin : 5,
-        marginTop : 10,
+    header : {
+        fontSize : 16
+
     },
-    otsikko : {
-        textAlign : 'center',
-        fontSize : 18,
-        marginTop : -15,
-        padding : 3
+    time : {
+        fontSize : 12,
+        marginTop : 5
+
     },
-    lataus : {
-        marginTop : 30
+    loading : {
+        marginTop : 160
     }
   });
   

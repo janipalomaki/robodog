@@ -15,7 +15,7 @@ export default function Home ( { navigation }) {
 
                 <Card
                 style={styles.kortti}
-                onPress={ () => navigation.navigate("Market")}
+                onPress={ () => navigation.navigate("CoinMarket")}
                 >
                     <Card.Content>
                         <Title
@@ -52,9 +52,23 @@ export default function Home ( { navigation }) {
                     </Card.Content>
                     <Card.Cover source={require ('../img/news.png') } />
                 </Card>
+
+                <Card
+                style={styles.kortti}
+                onPress={ () => navigation.navigate("Reddit")}
+                >
+                    <Card.Content>
+                        <Title
+                        style={styles.otsikko}
+                        >Reddit</Title>
+                    </Card.Content>
+                    <Card.Cover 
+                    style={styles.cover}
+                    source={require ('../img/streetbets.png') } />
+                </Card>
     
                 
-                <Text style={styles.attribute}>Copyright 2021 Jani Palomäki. Data from CryptoCompare and Alternative </Text>
+                <Text style={styles.attribute}>Copyright 2021 janipalomaki</Text>
             </PaperProvider>
         </ScrollView>
 
@@ -71,18 +85,19 @@ const styles = StyleSheet.create({
     kortti : {
         padding : 3,
         margin : 5,
-        marginTop : 10,
+        marginTop : 1,
     },
     otsikko : {
         textAlign : 'center',
-        fontSize : 24,
+        fontSize : 18,
         marginTop : -15,
         padding : 3
     },
     attribute : {
         textAlign : 'center',
         fontSize : 12,
-
+        marginTop : 10,
+        marginBottom : 15
     }
   });
   

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { StyleSheet, ScrollView, Image } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 // React Native Paper
 import { ActivityIndicator, Text } from 'react-native-paper';
@@ -92,12 +92,17 @@ export default function News ({ navigation }) {
                 size="large"
                 animating={true} 
                  />
-            }
-            </List>
+                }
+                </List>
+
+            <Text style={styles.attribute}>Data from CryptoCompare</Text>
+           
             </Content>
         </Container>
     )
 }
+
+
 
 const styles = StyleSheet.create({
     source : {
@@ -116,6 +121,12 @@ const styles = StyleSheet.create({
     },
     loading : {
         marginTop : 160
+    },
+    attribute : {
+        textAlign : 'center',
+        fontSize : 12,
+        marginTop : 15,
+        marginBottom : 15
     }
   });
   

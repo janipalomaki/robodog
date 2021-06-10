@@ -51,12 +51,16 @@ export default function MarketSentiment ({ route, navigation }) {
     }, []); //category
 
 
-//console.log(data.data);
+console.log(data.data);
 
     return(
 
         <ScrollView>
             <PaperProvider>
+
+                <Card style={styles.kortti}>
+                    <Card.Cover source={{ uri: "https://alternative.me/crypto/fear-and-greed-index.png" }} />
+                </Card>
 
 
                 {(data.dataReady)

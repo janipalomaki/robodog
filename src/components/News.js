@@ -12,9 +12,7 @@ import { Container, Content, List, ListItem, Left, Body, Thumbnail} from 'native
 import moment from 'moment';
 
 
-export default function News ({ route, navigation }) {
-
-   // const {category} = route.params;
+export default function News ({ navigation }) {
 
     // Data
     const [data, setData] = useState({
@@ -112,7 +110,8 @@ const styles = StyleSheet.create({
     },
     time : {
         fontSize : 12,
-        marginTop : 5
+        marginTop : 5,
+        color : "blue"
 
     },
     loading : {

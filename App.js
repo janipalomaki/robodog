@@ -20,12 +20,12 @@ const Stack = createStackNavigator();
 
 import { Appbar } from 'react-native-paper';
 
-// Appbar:ia varten
+// Appbar setup
 function CustomNavigationBar({ navigation, previous }) {
   return (
     <Appbar.Header>
       {previous ? <Appbar.BackAction onPress={navigation.goBack} /> : null}
-      <Appbar.Content title="CRYPTO-INFO" subtitle={"All you need to know about cryptocurrencies"} />
+      <Appbar.Content title="CryptoTracker" subtitle={"All you need to know about cryptocurrencies"} />
     </Appbar.Header>
   );
 }

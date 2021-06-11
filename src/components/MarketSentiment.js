@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
-import { StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 // React Native Paper
-import { Provider as PaperProvider, Card, Title, Paragraph } from 'react-native-paper';
-import { ActivityIndicator, Text } from 'react-native-paper';
+import { ActivityIndicator } from 'react-native-paper';
+
+// Native base
+import { Container, Content, List, ListItem, Left, Body, Thumbnail, Text, Button} from 'native-base'
+
+// Moment.js
+import moment from 'moment';
 
 
 export default function MarketSentiment ({ route, navigation }) {
@@ -24,7 +29,7 @@ export default function MarketSentiment ({ route, navigation }) {
 
             const api_key = "";
             const base_url = "https://api.alternative.me/";
-            const url = base_url + 'fng/?limit=10';
+            const url = base_url + 'fng/?limit=30';
             const response = await fetch(url);
             const data = await response.json();
 
@@ -54,82 +59,61 @@ export default function MarketSentiment ({ route, navigation }) {
 console.log(data.data);
 
     return(
+        <Container>
+            <Content>
+                <List>
+                    
+                    {(data.dataReady)
+                    ? 
+                    data.data.map((sentiment, idx) => {
 
-        <ScrollView>
-            <PaperProvider>
+                        let time = moment(sentiment.timestamp * 1000).fromNow();
 
-                <Card style={styles.kortti}>
-                    <Card.Cover source={{ uri: "https://alternative.me/crypto/fear-and-greed-index.png" }} />
-                </Card>
-
-
-                {(data.dataReady)
-                ? <Text>
-                    {JSON.stringify(data.data)}
-                </Text>
-
-            /*
-                
-           
-                data.data.map((uutinen, idx) => {
-
-                return (
-                        <Card
-                        style={styles.kortti}
-                        onPress={ () => navigation.navigate("Details",
-                        { // Viedään tiedot --> "Details"
-                            url : uutinen.url
+                        let color = "";
+                        
+                        // Sentiment value colors styles
+                        if (sentiment.value < 25) {
+                            
                         }
-                        )}
-                        key={idx}
-                        >
-                            <Card.Content>
-                                <Title
-                                style={styles.otsikko}
-                                >{uutinen.title}</Title>
-                                <Paragraph>{uutinen.body}</Paragraph>
-                            </Card.Content>
-                            <Card.Cover source={{ uri: uutinen.imageurl }} />
-                        </Card>
-                    )    
-                })
 
-                    */
-                :<ActivityIndicator 
-                style={styles.lataus}
-                size="large"
-                animating={true} 
-                 />
-            }
+                    return (
+                        <ListItem key={idx}>
+                            <Left>
+                                <Text style={styles.time}>{time}</Text>
+                            </Left>
 
-        
-            </PaperProvider>
-        </ScrollView>
+                            <Body>
+                                <Button rounded>
+                                    <Text style={styles.value}>{sentiment.value}</Text>
+                                </Button>
+                                <Text style={styles.value_classification}>{sentiment.value_classification}</Text>     
+                            </Body>
+                        </ListItem>
+                        )    
+                    })
+                    :<ActivityIndicator 
+                    style={styles.lataus}
+                    size="large"
+                    animating={true} 
+                    />
+                }
+                </List>
+            </Content>
+        </Container>
 
-        
     )
 
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
+    time : {
+        fontSize : 14
     },
-    kortti : {
-        padding : 3,
-        margin : 5,
-        marginTop : 10,
+    value : {
+        fontWeight : "bold",
+        fontSize : 16
     },
-    otsikko : {
-        textAlign : 'center',
-        fontSize : 18,
-        marginTop : -15,
-        padding : 3
-    },
-    lataus : {
-        marginTop : 30
+    value_classification : {
+        fontSize : 12
     }
   });

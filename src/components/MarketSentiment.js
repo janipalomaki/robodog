@@ -6,7 +6,7 @@ import { StyleSheet } from 'react-native';
 import { ActivityIndicator } from 'react-native-paper';
 
 // Native base
-import { Container, Content, List, ListItem, Left, Body, Thumbnail, Text, Button} from 'native-base'
+import { Container, Content, List, ListItem, Left, Body, Text, Button, Right} from 'native-base'
 
 // Moment.js
 import moment from 'moment';
@@ -56,11 +56,13 @@ export default function MarketSentiment ({ route, navigation }) {
     }, []); //category
 
 
-console.log(data.data);
+//console.log(data.data);
 
     return(
         <Container>
             <Content>
+                <Text>Fear & Greed Index</Text>
+                <Text note>Multifactorial Crypto Market Sentiment Analysis</Text>
                 <List>
                     
                     {(data.dataReady)
@@ -68,31 +70,54 @@ console.log(data.data);
                     data.data.map((sentiment, idx) => {
 
                         let time = moment(sentiment.timestamp * 1000).fromNow();
-
+                        
+                        let date = new Date(sentiment.timestamp * 1000);
+                        let updated = ( "Updated: "
+                                        + date.getDate() + "/"
+                                        +(date.getMonth()+1) + "/"
+                                        + date.getFullYear()
+                                        );
+                
                         let color = "";
+                        let colorValue = Number(sentiment.value);
                         
                         // Sentiment value colors styles
-                        if (sentiment.value < 25) {
-                            
+                        if ( colorValue <= 25 ) {
+                            color = styles.danger;
+
+                        } else if ( colorValue <= 40) {
+                            color = styles.warning;
+                        
+                        } else if ( colorValue <= 50) {
+                            color = styles.neutral;
+                        
+                        } else {
+                            color = styles.success;
                         }
 
                     return (
-                        <ListItem key={idx}>
+                        <ListItem 
+                        style={styles.listItem}
+                        avatar key={idx}>
                             <Left>
-                                <Text style={styles.time}>{time}</Text>
-                            </Left>
-
-                            <Body>
-                                <Button rounded>
+                                <Button 
+                                style={color}
+                                rounded>
                                     <Text style={styles.value}>{sentiment.value}</Text>
                                 </Button>
-                                <Text style={styles.value_classification}>{sentiment.value_classification}</Text>     
+                            </Left>
+                            <Body>
+                                <Text style={styles.value_classification}>{sentiment.value_classification}</Text> 
+                                <Text note style={styles.updated}>{updated}</Text>
                             </Body>
+                            <Right>
+                            <Text note style={styles.time}>{time}</Text>
+                            </Right>
                         </ListItem>
                         )    
                     })
                     :<ActivityIndicator 
-                    style={styles.lataus}
+                    style={styles.loading}
                     size="large"
                     animating={true} 
                     />
@@ -107,13 +132,36 @@ console.log(data.data);
 
 const styles = StyleSheet.create({
     time : {
-        fontSize : 14
+        fontSize : 12,
+        color : "blue"
     },
     value : {
         fontWeight : "bold",
-        fontSize : 16
+        fontSize : 14
     },
     value_classification : {
+        fontSize : 14,
+        fontWeight : "bold"
+    },
+    loading : {
+        marginTop : 165
+    },
+    updated : {
         fontSize : 12
+    },
+    listItem : {
+        padding : 3
+    },
+    danger : {
+        backgroundColor : "red"
+    },
+    warning : { 
+        backgroundColor : "orange"
+    },
+    neutral : {
+        backgroundColor : "yellow"
+    },
+    success : {
+        backgroundColor : "green"
     }
   });

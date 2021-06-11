@@ -14,6 +14,7 @@ import MarketSentiment from "./src/components/MarketSentiment";
 import News from "./src/components/News";
 import Reddit from "./src/components/Reddit";
 import Details from "./src/components/Details";
+import Footer from "./src/components/Footer";
 
 const Stack = createStackNavigator();
 
@@ -48,6 +49,7 @@ export default function App() {
         <Stack.Screen name="Details" component={Details} />
         
       </Stack.Navigator>
+
 
     </NavigationContainer>
   );

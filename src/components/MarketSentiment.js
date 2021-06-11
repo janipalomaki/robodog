@@ -24,7 +24,7 @@ export default function MarketSentiment ({ route, navigation }) {
 
             const api_key = "";
             const base_url = "https://api.alternative.me/";
-            const url = base_url + 'fng/?limit=5';
+            const url = base_url + 'fng/?limit=10';
             const response = await fetch(url);
             const data = await response.json();
 

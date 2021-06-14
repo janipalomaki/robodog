@@ -2,10 +2,20 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import { NavigationContainer} from '@react-navigation/native';
+
+// Stack Navigator
 import { createStackNavigator } from '@react-navigation/stack';
+const Stack = createStackNavigator();
+
+// Bottom Tab Navigator
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
 // Stylesheet
 import { StyleSheet} from 'react-native';
+
+// Expo fonts
+import * as Font from 'expo-font';
+import { useFonts } from 'expo-font';
 
 // Components
 import Home from "./src/components/Home";
@@ -14,31 +24,24 @@ import MarketSentiment from "./src/components/MarketSentiment";
 import News from "./src/components/News";
 import Reddit from "./src/components/Reddit";
 import Details from "./src/components/Details";
-import Footer from "./src/components/Footer";
-
-const Stack = createStackNavigator();
-
-import { Appbar } from 'react-native-paper';
-
-// Appbar setup
-function CustomNavigationBar({ navigation, previous }) {
-  return (
-    <Appbar.Header>
-      {previous ? <Appbar.BackAction onPress={navigation.goBack} /> : null}
-      <Appbar.Content title="CryptoTracker" subtitle={"All you need to know about cryptocurrencies"} />
-    </Appbar.Header>
-  );
-}
+import TopNavigationBar from './src/components/TopNavigationBar';
+import BottomNavigationBar from './src/components/BottomNavigationBar';
 
 
 export default function App() {
+
+  // Expo fonts
+const [loaded, error] = useFonts({ 
+  Roboto_medium : require('./assets/fonts/Roboto/Roboto-Medium.ttf')
+});
+
   return (
     <NavigationContainer>
 
       <Stack.Navigator 
       initialRouteName="Home"
       screenOptions={{
-        header: (props) => <CustomNavigationBar {...props} />,
+        header: (props) => <TopNavigationBar {...props} />,
       }}
       >
         <Stack.Screen name="Home" component={Home} />
@@ -49,7 +52,7 @@ export default function App() {
         <Stack.Screen name="Details" component={Details} />
         
       </Stack.Navigator>
-
+      <BottomNavigationBar/> 
 
     </NavigationContainer>
   );

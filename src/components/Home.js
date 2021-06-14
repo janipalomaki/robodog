@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 import { StyleSheet, ScrollView} from 'react-native';
 
@@ -14,7 +14,7 @@ export default function Home ( { navigation }) {
             <PaperProvider>
 
                 <Card
-                style={styles.kortti}
+                style={styles.firstCard}
                 onPress={ () => navigation.navigate("CoinMarket")}
                 >
                     <Card.Content>
@@ -28,7 +28,7 @@ export default function Home ( { navigation }) {
 
             
                 <Card
-                style={styles.kortti}
+                style={styles.card}
                 onPress={ () => navigation.navigate("MarketSentiment")}
                 >
                     <Card.Content>
@@ -42,7 +42,7 @@ export default function Home ( { navigation }) {
 
 
                 <Card
-                style={styles.kortti}
+                style={styles.card}
                 onPress={ () => navigation.navigate("News")}
                 >
                     <Card.Content>
@@ -54,7 +54,7 @@ export default function Home ( { navigation }) {
                 </Card>
 
                 <Card
-                style={styles.kortti}
+                style={styles.lastCard}
                 onPress={ () => navigation.navigate("Reddit")}
                 >
                     <Card.Content>
@@ -82,10 +82,21 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
-    kortti : {
+    firstCard : {
+        padding : 3,
+        margin : 5,
+        marginTop : 10,
+    },
+    card : {
         padding : 3,
         margin : 5,
         marginTop : 1,
+    },
+    lastCard : {
+        padding : 3,
+        margin : 5,
+        marginTop : 1,
+        marginBottom : 25
     },
     otsikko : {
         textAlign : 'center',

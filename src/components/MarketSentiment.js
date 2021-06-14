@@ -53,7 +53,7 @@ export default function MarketSentiment ({ route, navigation }) {
 
     useEffect(() => {
         getMarketSentiment();
-    }, []); //category
+    }, [data.dataReady]); //category
 
 
 //console.log(data.data);
@@ -61,7 +61,7 @@ export default function MarketSentiment ({ route, navigation }) {
     return(
         <Container>
             <Content>
-                <Text>Fear & Greed Index</Text>
+                <Text>Bitcoin Fear & Greed Index</Text>
                 <Text note>Multifactorial Crypto Market Sentiment Analysis</Text>
                 <List>
                     

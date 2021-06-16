@@ -6,35 +6,36 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 
 const Tab = createMaterialBottomTabNavigator();
 
-const BottomNavigationBar = ( navigation ) => (
-    
- <Appbar style={styles.bottom}>
-   
-   <Appbar.Action
-    style={styles.icon}
-    icon="chart-areaspline"
-     onPress={() => console.log("navigate")}
-    />
-    <Appbar.Action 
-    style={styles.icon}
-    icon="currency-btc" 
-    onPress={() => console.log("navigate")} 
-    />
-    <Appbar.Action 
-    style={styles.icon}
-    icon="newspaper" 
-    onPress={() => console.log("navigate")} 
-    />
+export default function BottomNavigationBar ( {navigation }) {
+ 
+  return (
+  <Appbar style={styles.bottom}>
     <Appbar.Action
-    style={styles.icon}
-    icon="reddit"
-    onPress={() => console.log("navigate")}
-    />
+      style={styles.icon}
+      icon="chart-areaspline"
+      onPress={() => console.log('Market')}
+      />
+      <Appbar.Action 
+      style={styles.icon}
+      icon="currency-btc" 
+      onPress={() => console.log("Sentiment")} 
+      />
+      <Appbar.Action 
+      style={styles.icon}
+      icon="newspaper" 
+      onPress={() => console.log("News")} 
+      />
+      <Appbar.Action
+      style={styles.icon}
+      icon="reddit"
+      onPress={() => console.log("Reddit")}
+      />
+    </Appbar>
+  )
 
-  </Appbar>
- );
 
-export default BottomNavigationBar;
+}
+    
 
 const styles = StyleSheet.create({
   bottom: {

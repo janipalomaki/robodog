@@ -12,7 +12,7 @@ import { Container, Content, List, ListItem, Left, Body, Text, Button, Right} fr
 import moment from 'moment';
 
 
-export default function MarketSentiment ({ route, navigation }) {
+export default function Sentiment ({ route, navigation }) {
 
    // const {category} = route.params;
 

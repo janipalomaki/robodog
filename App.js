@@ -7,9 +7,6 @@ import { NavigationContainer} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 const Stack = createStackNavigator();
 
-// Bottom Tab Navigator
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-
 // Stylesheet
 import { StyleSheet} from 'react-native';
 
@@ -19,13 +16,17 @@ import { useFonts } from 'expo-font';
 
 // Components
 import Home from "./src/components/Home";
-import CoinMarket from "./src/components/CoinMarket";
-import MarketSentiment from "./src/components/MarketSentiment";
+import Market from "./src/components/Market";
+import Sentiment from "./src/components/Sentiment";
 import News from "./src/components/News";
 import Reddit from "./src/components/Reddit";
 import Details from "./src/components/Details";
 import TopNavigationBar from './src/components/TopNavigationBar';
-import BottomNavigationBar from './src/components/BottomNavigationBar';
+
+// Bottom Navigation
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+const Tab = createMaterialBottomTabNavigator();
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
 export default function App() {
@@ -36,25 +37,53 @@ const [loaded, error] = useFonts({
 });
 
   return (
+
     <NavigationContainer>
+    <TopNavigationBar />
+      <Tab.Navigator
+            style={styles.navigator}
+            initialRouteName="Home"
+            screenOptions={({ route }) => ({
+              header: (props) => <TopNavigationBar {...props} />,
+              tabBarIcon: ({ focused, color, size }) => {
+                let iconName;
 
-      <Stack.Navigator 
-      initialRouteName="Home"
-      screenOptions={{
-        header: (props) => <TopNavigationBar {...props} />,
-      }}
-      >
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="CoinMarket" component={CoinMarket} />
-        <Stack.Screen name="MarketSentiment" component={MarketSentiment} />
-        <Stack.Screen name="News" component={News} />
-        <Stack.Screen name="Reddit" component={Reddit} />
-        <Stack.Screen name="Details" component={Details} />
+                if (route.name === 'Home') {
+                  iconName = focused
+                    ? 'home-outline'
+                    : 'home-outline';
+                } else if (route.name === 'Market') {
+                  iconName = focused ? 'bar-chart-outline' : 'bar-chart-outline';
+                } else if (route.name === 'Sentiment') {
+                  iconName = focused ? 'skull-outline' : 'skull-outline';
+                } else if (route.name === 'News') {
+                  iconName = focused ? 'newspaper-outline' : 'newspaper-outline';
+                } else if (route.name === 'Reddit') {
+                  iconName = focused ? 'logo-reddit' : 'logo-reddit';
+                }
+
+
+                // You can return any component that you like here!
+                return <Ionicons name={iconName} size={size} color={color} />;
+              },
+            })}
+            tabBarOptions={{
+              activeTintColor: 'tomato',
+              inactiveTintColor: 'gray',
+            }}
+          >
+            <Tab.Screen name="Home" component={Home} />
+            <Tab.Screen name="Market" component={Market} />
+            <Tab.Screen name="Sentiment" component={Sentiment} />
+            <Tab.Screen name="News" component={News} />
+            <Tab.Screen name="Reddit" component={Reddit} />
+            <Tab.Screen name="Details" component={Details} />
+      
+      </Tab.Navigator>
+  </NavigationContainer>    
         
-      </Stack.Navigator>
-      <BottomNavigationBar/> 
-
-    </NavigationContainer>
+  
+    
   );
 }
 
@@ -65,4 +94,29 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  navigator : {
+    
+  }
 });
+
+
+    /*
+    <NavigationContainer>
+          <Stack.Navigator 
+          initialRouteName="Home"
+          screenOptions={{
+            header: (props) => <TopNavigationBar {...props} />,
+          }}
+          >
+            <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="CoinMarket" component={CoinMarket} />
+            <Stack.Screen name="MarketSentiment" component={MarketSentiment} />
+            <Stack.Screen name="News" component={News} />
+            <Stack.Screen name="Reddit" component={Reddit} />
+            <Stack.Screen name="Details" component={Details} />
+            
+          </Stack.Navigator>
+        </NavigationContainer>
+  */
+
+  

@@ -15,7 +15,7 @@ export default function Home ( { navigation }) {
 
                 <Card
                 style={styles.firstCard}
-                onPress={ () => navigation.navigate("CoinMarket")}
+                onPress={ () => navigation.navigate("Market")}
                 >
                     <Card.Content>
                         <Title
@@ -29,7 +29,7 @@ export default function Home ( { navigation }) {
             
                 <Card
                 style={styles.card}
-                onPress={ () => navigation.navigate("MarketSentiment")}
+                onPress={ () => navigation.navigate("Sentiment")}
                 >
                     <Card.Content>
                         <Title

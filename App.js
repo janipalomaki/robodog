@@ -1,7 +1,7 @@
 // React Navigation setup
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { NavigationContainer} from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme} from '@react-navigation/native';
 
 // Stack Navigator
 import { createStackNavigator } from '@react-navigation/stack';
@@ -28,6 +28,14 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 const Tab = createMaterialBottomTabNavigator();
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+// Theme
+const MyTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: '#4267B2',
+  },
+};
 
 export default function App() {
 
@@ -38,51 +46,48 @@ const [loaded, error] = useFonts({
 
   return (
 
-    <NavigationContainer>
-    <TopNavigationBar />
-      <Tab.Navigator
-            style={styles.navigator}
-            initialRouteName="Home"
-            screenOptions={({ route }) => ({
-              header: (props) => <TopNavigationBar {...props} />,
-              tabBarIcon: ({ focused, color, size }) => {
-                let iconName;
+      <NavigationContainer theme={MyTheme}>
+      <TopNavigationBar />
+        <Tab.Navigator
+              initialRouteName="Home"
+              screenOptions={({ route }) => ({
+                header: (props) => <TopNavigationBar {...props} />,
+                tabBarIcon: ({ focused, color, size }) => {
+                  let iconName;
 
-                if (route.name === 'Home') {
-                  iconName = focused
-                    ? 'home-outline'
-                    : 'home-outline';
-                } else if (route.name === 'Market') {
-                  iconName = focused ? 'bar-chart-outline' : 'bar-chart-outline';
-                } else if (route.name === 'Sentiment') {
-                  iconName = focused ? 'skull-outline' : 'skull-outline';
-                } else if (route.name === 'News') {
-                  iconName = focused ? 'newspaper-outline' : 'newspaper-outline';
-                } else if (route.name === 'Reddit') {
-                  iconName = focused ? 'logo-reddit' : 'logo-reddit';
-                }
+                  if (route.name === 'Home') {
+                    iconName = focused
+                      ? 'home-outline'
+                      : 'home-outline';
+                  } else if (route.name === 'Market') {
+                    iconName = focused ? 'bar-chart-outline' : 'bar-chart-outline';
+                  } else if (route.name === 'Sentiment') {
+                    iconName = focused ? 'skull-outline' : 'skull-outline';
+                  } else if (route.name === 'News') {
+                    iconName = focused ? 'newspaper-outline' : 'newspaper-outline';
+                  } else if (route.name === 'Reddit') {
+                    iconName = focused ? 'logo-reddit' : 'logo-reddit';
+                  }
 
 
-                // You can return any component that you like here!
-                return <Ionicons name={iconName} size={size} color={color} />;
-              },
-            })}
-            tabBarOptions={{
-              activeTintColor: 'tomato',
-              inactiveTintColor: 'gray',
-            }}
-          >
-            <Tab.Screen name="Home" component={Home} />
-            <Tab.Screen name="Market" component={Market} />
-            <Tab.Screen name="Sentiment" component={Sentiment} />
-            <Tab.Screen name="News" component={News} />
-            <Tab.Screen name="Reddit" component={Reddit} />
-            <Tab.Screen name="Details" component={Details} />
-      
-      </Tab.Navigator>
-  </NavigationContainer>    
+                  // You can return any component that you like here!
+                  return <Ionicons name={iconName} size={size} color={color} />;
+                },
+              })}
+              tabBarOptions={{
+                activeTintColor: 'tomato',
+                inactiveTintColor: 'gray',
+              }}
+            >
+              <Tab.Screen name="Home" component={Home} />
+              <Tab.Screen name="Market" component={Market} />
+              <Tab.Screen name="Sentiment" component={Sentiment} />
+              <Tab.Screen name="News" component={News} />
+              <Tab.Screen name="Reddit" component={Reddit} />
+              <Tab.Screen name="Details" component={Details} />
         
-  
+        </Tab.Navigator>
+    </NavigationContainer>    
     
   );
 }
@@ -93,14 +98,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  navigator : {
-    
   }
 });
 
 
-    /*
+    /* STACK NAVIGATOR
     <NavigationContainer>
           <Stack.Navigator 
           initialRouteName="Home"

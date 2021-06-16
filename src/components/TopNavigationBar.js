@@ -23,7 +23,7 @@ export default function TopNavigationBar({ navigation, previous }) {
 
   const styles = StyleSheet.create({
     header : {
-      backgroundColor : "blue"
+      backgroundColor : "#4267B2"
 
     },
     icon: {

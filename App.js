@@ -37,14 +37,58 @@ const MyTheme = {
   },
 };
 
-// News stack
+// Stacks
+const HomeStack = createStackNavigator();
+function HomeStackScreen() {
+  return (
+      <HomeStack.Navigator>
+        <HomeStack.Screen
+        options={{headerShown: false}} 
+        name="Home" component={Home} />
+      </HomeStack.Navigator>
+    );
+}
+const MarketStack = createStackNavigator();
+function MarketStackScreen() {
+  return (
+      <MarketStack.Navigator>
+        <MarketStack.Screen 
+        options={{headerShown: false}} 
+        name="Market" component={Market} />
+      </MarketStack.Navigator>
+    );
+}
+const SentimentStack = createStackNavigator();
+function SentimentStackScreen() {
+  return (
+      <SentimentStack.Navigator>
+        <SentimentStack.Screen 
+        options={{headerShown: false}} 
+        name="Sentiment" component={Sentiment} />
+      </SentimentStack.Navigator>
+    );
+}
 const NewsStack = createStackNavigator();
 function NewsStackScreen() {
   return (
       <NewsStack.Navigator>
-        <NewsStack.Screen name="Latest News" component={LatestNews} />
-        <NewsStack.Screen name="News" component={News} />
+        <NewsStack.Screen
+        options={{headerShown: false}}  
+        name="Latest News" component={LatestNews} />
+        <NewsStack.Screen 
+        options={{headerShown: false}} 
+        name="News" component={News} />
       </NewsStack.Navigator>
+    );
+}
+const RedditStack = createStackNavigator();
+function RedditStackScreen() {
+  return (
+      <RedditStack.Navigator>
+        <RedditStack.Screen 
+        options={{headerShown: false}} 
+        name="Reddit" component={Reddit} />
+      </RedditStack.Navigator>
     );
 }
 
@@ -91,11 +135,11 @@ const [loaded, error] = useFonts({
                 inactiveTintColor: 'gray',
               }}
             >
-              <Tab.Screen name="Home" component={Home} />
-              <Tab.Screen name="Market" component={Market} />
-              <Tab.Screen name="Sentiment" component={Sentiment} />
+              <Tab.Screen name="Home" component={HomeStackScreen} />
+              <Tab.Screen name="Market" component={MarketStackScreen} />
+              <Tab.Screen name="Sentiment" component={SentimentStackScreen} />
               <Tab.Screen name="News" component={NewsStackScreen} />
-              <Tab.Screen name="Reddit" component={Reddit} />
+              <Tab.Screen name="Reddit" component={RedditStackScreen} />
         
         </Tab.Navigator>
     </NavigationContainer>    
@@ -110,25 +154,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   }
 });
-
-
-    /* STACK NAVIGATOR
-    <NavigationContainer>
-          <Stack.Navigator 
-          initialRouteName="Home"
-          screenOptions={{
-            header: (props) => <TopNavigationBar {...props} />,
-          }}
-          >
-            <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen name="CoinMarket" component={CoinMarket} />
-            <Stack.Screen name="MarketSentiment" component={MarketSentiment} />
-            <Stack.Screen name="News" component={News} />
-            <Stack.Screen name="Reddit" component={Reddit} />
-            <Stack.Screen name="Details" component={Details} />
-            
-          </Stack.Navigator>
-        </NavigationContainer>
-  */
-
-  

@@ -61,7 +61,7 @@ export default function Sentiment ({ route, navigation }) {
     return(
         <Container>
             <Content>
-                <Text>Bitcoin Fear & Greed Index</Text>
+                <Text>Fear & Greed Index</Text>
                 <Text note>Multifactorial Crypto Market Sentiment Analysis</Text>
                 <List>
                     

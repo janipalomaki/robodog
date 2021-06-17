@@ -11,7 +11,7 @@ export default function TopNavigationBar({ navigation, previous }) {
       style={styles.header}
       >
         {previous ? <Appbar.BackAction onPress={navigation.goBack} /> : null}
-        <Appbar.Content title="RoboDog" subtitle={"Cryptocurrency market tracker"} />
+        <Appbar.Content title="RoboDog" />
         <Appbar.Action 
         style={styles.icon}
         icon={require('../img/cryptodog.png')} 
@@ -23,7 +23,7 @@ export default function TopNavigationBar({ navigation, previous }) {
 
   const styles = StyleSheet.create({
     header : {
-      backgroundColor : "#4267B2"
+      backgroundColor : "#121212"
 
     },
     icon: {
@@ -31,3 +31,5 @@ export default function TopNavigationBar({ navigation, previous }) {
     },
   });
   
+
+  // subtitle={"Cryptocurrency market tracker"} 

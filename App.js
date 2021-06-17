@@ -7,6 +7,11 @@ import { NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 const Stack = createStackNavigator();
 
+// Bottom Navigation
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+const Tab = createMaterialBottomTabNavigator();
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
 // Stylesheet
 import { StyleSheet} from 'react-native';
 
@@ -18,24 +23,30 @@ import { useFonts } from 'expo-font';
 import Home from "./src/components/Home";
 import Market from "./src/components/Market";
 import Sentiment from "./src/components/Sentiment";
-import News from "./src/components/News";
+import LatestNews from "./src/components/LatestNews";
 import Reddit from "./src/components/Reddit";
-import Details from "./src/components/Details";
+import News from "./src/components/News";
 import TopNavigationBar from './src/components/TopNavigationBar';
-
-// Bottom Navigation
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-const Tab = createMaterialBottomTabNavigator();
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
 // Theme
 const MyTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: '#4267B2',
+    primary: '#121212',
   },
 };
+
+// News stack
+const NewsStack = createStackNavigator();
+function NewsStackScreen() {
+  return (
+      <NewsStack.Navigator>
+        <NewsStack.Screen name="Latest News" component={LatestNews} />
+        <NewsStack.Screen name="News" component={News} />
+      </NewsStack.Navigator>
+    );
+}
 
 export default function App() {
 
@@ -67,11 +78,12 @@ const [loaded, error] = useFonts({
                     iconName = focused ? 'newspaper-outline' : 'newspaper-outline';
                   } else if (route.name === 'Reddit') {
                     iconName = focused ? 'logo-reddit' : 'logo-reddit';
-                  }
-
+                  } 
 
                   // You can return any component that you like here!
-                  return <Ionicons name={iconName} size={size} color={color} />;
+                  return <Ionicons 
+                  style={styles.tabs}
+                  name={iconName} size={size} color={color} />;
                 },
               })}
               tabBarOptions={{
@@ -82,9 +94,8 @@ const [loaded, error] = useFonts({
               <Tab.Screen name="Home" component={Home} />
               <Tab.Screen name="Market" component={Market} />
               <Tab.Screen name="Sentiment" component={Sentiment} />
-              <Tab.Screen name="News" component={News} />
+              <Tab.Screen name="News" component={NewsStackScreen} />
               <Tab.Screen name="Reddit" component={Reddit} />
-              <Tab.Screen name="Details" component={Details} />
         
         </Tab.Navigator>
     </NavigationContainer>    
@@ -93,9 +104,8 @@ const [loaded, error] = useFonts({
 }
 
 const styles = StyleSheet.create({
-  container: {
+  tabs: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   }

@@ -57,6 +57,7 @@ export default function LatestNews ({ navigation }) {
 
         <Container>
             <Content>
+                <Text style={styles.text}>Latest Crypto news</Text>
                 <List>
                 {(data.dataReady)
                 ? data.news.map((uutinen, idx) => {
@@ -104,13 +105,18 @@ export default function LatestNews ({ navigation }) {
 
 
 const styles = StyleSheet.create({
+    text : {
+        marginTop : 10,
+        marginLeft : 18,
+        fontSize : 18,
+        fontWeight : "bold"
+    },
     source : {
         fontWeight : "bold",
         fontSize : 18
     },
     header : {
-        fontSize : 16
-
+        fontSize : 16,
     },
     time : {
         fontSize : 12,

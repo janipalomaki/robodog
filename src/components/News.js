@@ -5,12 +5,10 @@ import { StyleSheet } from 'react-native';
 // Webview
 import { WebView } from 'react-native-webview';
 
-export default function News ({ route, navigation }) {
+export default function News ({ route }) {
 
-    const {url} = route.params;
+const {url} = route.params;
 
-    
-//console.log(url);
 
     return(
 

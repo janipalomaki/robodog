@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
-import { StyleSheet, ScrollView } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 // React Native Paper
-import { Provider as PaperProvider, Card, Title, Paragraph } from 'react-native-paper';
 import { ActivityIndicator, Text } from 'react-native-paper';
 
 // Native base
-import { Container, Header, Content, List, ListItem, Left, Body, Right, Thumbnail} from 'native-base'
+import { Container, Content, List, ListItem, Left, Body, Right } from 'native-base'
 
 
-export default function Market2 ({ route, navigation }) {
-
-   // const {category} = route.params;
+export default function Market2 ({ navigation }) {
 
     // Data
     const [marketData, setMarketData] = useState({
@@ -110,59 +107,6 @@ export default function Market2 ({ route, navigation }) {
 
         
     )
-
-
-
-
-    // React Native Paper 
-    /*
-    return(
-
-        <ScrollView>
-            <PaperProvider>
-
-                {(marketData.dataReady)
-                ? currencies.map((currency, idx) => {
-
-                return (
-                        <Card
-                        style={styles.kortti}
-                        onPress={ () => navigation.navigate("",
-                        { // Viedään tiedot --> "Details"
-                            //url : uutinen.url
-                        }
-                        )}
-                        key={idx}
-                        >
-                            <Card.Content>
-                                <Title
-                                style={styles.otsikko}
-                                >{currency.currency.rank}. {currency.currency.name}</Title>
-                                 <Paragraph></Paragraph>
-                                <Paragraph>{currency.currency.quotes.USD.price}</Paragraph>
-                            </Card.Content>
-                        </Card>
-                    )    
-                })
-                :<ActivityIndicator 
-                style={styles.lataus}
-                size="large"
-                animating={true} 
-                 />
-            }
-
-        
-            </PaperProvider>
-        </ScrollView>
-
-        
-    )
-    */
-
-
-
-
-
 
 }
 

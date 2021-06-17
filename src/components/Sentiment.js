@@ -12,9 +12,7 @@ import { Container, Content, List, ListItem, Left, Body, Text, Button, Right} fr
 import moment from 'moment';
 
 
-export default function Sentiment ({ route, navigation }) {
-
-   // const {category} = route.params;
+export default function Sentiment () {
 
     // Data
     const [data, setData] = useState({
@@ -61,8 +59,8 @@ export default function Sentiment ({ route, navigation }) {
     return(
         <Container>
             <Content>
-                <Text>Fear & Greed Index</Text>
-                <Text note>Multifactorial Crypto Market Sentiment Analysis</Text>
+                <Text style={styles.text}>Fear & Greed Index</Text>
+                <Text note style={styles.textNote}>Multifactorial Crypto Market Sentiment Analysis</Text>
                 <List>
                     
                     {(data.dataReady)
@@ -163,5 +161,14 @@ const styles = StyleSheet.create({
     },
     success : {
         backgroundColor : "green"
+    },
+    text : {
+        marginLeft : 18,
+        marginTop : 10,
+        fontSize : 18,
+        fontWeight : "bold"
+    },
+    textNote : {
+        marginLeft : 18,
     }
   });

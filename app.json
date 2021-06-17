@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "crypto-info",
-    "slug": "crypto-info",
-    "version": "1.0.0",
+    "name": "RoboDog",
+    "slug": "RoboDog",
+    "version": "0.9.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#151515"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,8 +22,9 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "backgroundColor": "#151515"
+      },
+      "package": "com.janipalomaki.robodog"
     },
     "web": {
       "favicon": "./assets/favicon.png"

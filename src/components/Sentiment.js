@@ -121,6 +121,8 @@ export default function Sentiment () {
                     />
                 }
                 </List>
+                <Text style={styles.attribute}>Data from Alternative</Text>
+           
             </Content>
         </Container>
 

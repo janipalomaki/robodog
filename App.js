@@ -21,6 +21,8 @@ import { useFonts } from 'expo-font';
 
 // Components
 import Home from "./src/components/Home";
+import HomeNew from "./src/components/HomeNew";
+
 import Market from "./src/components/Market";
 import Sentiment from "./src/components/Sentiment";
 import LatestNews from "./src/components/LatestNews";

@@ -6,7 +6,7 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
+<!-- TABLE OF CONTENTS 
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
@@ -29,11 +29,11 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    -->
+    
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
-
+-->
 
 <!-- ABOUT THE PROJECT 
 ## About The Project

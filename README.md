@@ -75,13 +75,14 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install npm@latest -g
   ```
+-->
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free API Key at [Cryptocompare](https://min-api.cryptocompare.com/pricing)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/janipalomaki/robodog.git
    ```
 3. Install NPM packages
    ```sh
@@ -91,7 +92,7 @@ This is an example of how to list things you need to use the software and how to
    ```JS
    const API_KEY = 'ENTER YOUR API';
    ```
--->
+
 
 
 <!-- USAGE EXAMPLES 

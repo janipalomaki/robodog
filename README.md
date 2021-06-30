@@ -62,6 +62,12 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 * [Alternative](https://alternative.me/crypto/api/)
 
 
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [Ionic](https://ionic.io/ionicons)
+* [Moment.js](https://momentjs.com/)
+
+
 <!-- GETTING STARTED 
 ## Getting Started
 
@@ -140,10 +146,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 -->
 
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [Ionic](https://ionic.io/ionicons)
-* [Moment.js](https://momentjs.com/)
+
 
 
 

@@ -6,7 +6,7 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
+<!-- TABLE OF CONTENTS 
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
@@ -29,11 +29,11 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    -->
+    
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
-
+-->
 
 <!-- ABOUT THE PROJECT 
 ## About The Project
@@ -57,6 +57,10 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 * [React Native Paper](https://callstack.github.io/react-native-paper/)
 * [Native Base](https://nativebase.io/)
 
+### API sources
+* [Cryptocompare](https://min-api.cryptocompare.com/documentation)
+* [Alternative](https://alternative.me/crypto/api/)
+
 
 <!-- GETTING STARTED 
 ## Getting Started
@@ -71,13 +75,14 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install npm@latest -g
   ```
+-->
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free API Key at [Cryptocompare](https://min-api.cryptocompare.com/pricing)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/janipalomaki/robodog.git
    ```
 3. Install NPM packages
    ```sh
@@ -87,7 +92,7 @@ This is an example of how to list things you need to use the software and how to
    ```JS
    const API_KEY = 'ENTER YOUR API';
    ```
--->
+
 
 
 <!-- USAGE EXAMPLES 
@@ -134,11 +139,11 @@ Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.c
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 -->
 
-
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [Ionic](https://ionic.io/ionicons)
 * [Moment.js](https://momentjs.com/)
+
 
 
 

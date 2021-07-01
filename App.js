@@ -21,10 +21,11 @@ import { useFonts } from 'expo-font';
 
 // Components
 import Home from "./src/components/Home";
-import HomeNew from "./src/components/HomeNew";
-
 import Market from "./src/components/Market";
+
 import Sentiment from "./src/components/Sentiment";
+import SentimentNew from './src/components/update/SentimentNew';
+
 import LatestNews from "./src/components/LatestNews";
 import Reddit from "./src/components/Reddit";
 import News from "./src/components/News";
@@ -66,7 +67,7 @@ function SentimentStackScreen() {
       <SentimentStack.Navigator>
         <SentimentStack.Screen 
         options={{headerShown: false}} 
-        name="Sentiment" component={Sentiment} />
+        name="Sentiment" component={SentimentNew} />
       </SentimentStack.Navigator>
     );
 }

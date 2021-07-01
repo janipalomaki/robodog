@@ -9,7 +9,7 @@ import { ActivityIndicator, Text } from 'react-native-paper';
 import { Container, Content, List, ListItem, Left, Body, Right } from 'native-base'
 
 
-export default function Market2 ({ navigation }) {
+export default function MarketNew ({ navigation }) {
 
     // Data
     const [marketData, setMarketData] = useState({

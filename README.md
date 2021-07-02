@@ -91,7 +91,7 @@ This is an example of how to list things you need to use the software and how to
    yarn add @react-navigation/native 
    yarn add @react-navigation/stack 
    ```
-   Commands below will install:
+  ## Commands below will install:
    --> All the dependencies listed within package.json in the local node_modules folder
    --> React Native Paper component library
    --> NativeBase component library

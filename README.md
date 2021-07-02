@@ -93,7 +93,7 @@ This is an example of how to list things you need to use the software and how to
    ```
    Commands below will install:
    All the dependencies listed within package.json in the local node_modules folder, React Native Paper component library, NativeBase component library, 
-   React  Navigation & Stack module.
+   React  Navigation and Stack module.
    
    
 3. Get a free API Key at [Cryptocompare](https://min-api.cryptocompare.com/pricing)

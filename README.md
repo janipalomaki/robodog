@@ -85,13 +85,19 @@ This is an example of how to list things you need to use the software and how to
    ```
 2. Open a terminal in your project´s folder and run:
    ```sh
-   yarn install (install all the dependencies listed within package.json in the local node_modules folder)
-   yarn add react-native-paper (install React Native Paper component library)
-   yarn add native-base styled-components styled-system (install NativeBase component library)
-   yarn add @react-navigation/native (install React Navigation)
-   yarn add @react-navigation/stack (install Stack module)
-  
+   yarn install 
+   yarn add react-native-paper 
+   yarn add native-base styled-components styled-system 
+   yarn add @react-navigation/native 
+   yarn add @react-navigation/stack 
    ```
+   Commands below will install:
+   --> All the dependencies listed within package.json in the local node_modules folder
+   --> React Native Paper component library
+   --> NativeBase component library
+   --> React Navigation
+   --> Stack module
+   
 3. Get a free API Key at [Cryptocompare](https://min-api.cryptocompare.com/pricing)
 
 4. Enter your API in `config.js`

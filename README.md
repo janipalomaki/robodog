@@ -79,12 +79,11 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [Cryptocompare](https://min-api.cryptocompare.com/pricing)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/janipalomaki/robodog.git
    ```
-3. Open a terminal in your project´s folder and run:
+2. Open a terminal in your project´s folder and run:
    ```sh
    yarn install (install all the dependencies listed within package.json in the local node_modules folder)
    yarn add react-native-paper (install React Native Paper component library)
@@ -93,11 +92,13 @@ This is an example of how to list things you need to use the software and how to
    yarn add @react-navigation/stack (install Stack module)
   
    ```
+3. Get a free API Key at [Cryptocompare](https://min-api.cryptocompare.com/pricing)
+
 4. Enter your API in `config.js`
    ```JS
    const API_KEY = 'ENTER YOUR API';
    ```
-
+5...
 
 
 <!-- USAGE EXAMPLES 

@@ -87,7 +87,7 @@ To get a local copy up and running follow these simple example steps.
    
 3. Get a free API Key at [Cryptocompare](https://min-api.cryptocompare.com/pricing)
 
-4. Enter your API in `config.js`
+4. Enter your API in `app.js`
    ```JS
    const API_KEY = 'ENTER YOUR API';
    ```

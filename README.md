@@ -62,6 +62,11 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 * [Alternative](https://alternative.me/crypto/api/)
 
 
+### Acknowledgements
+* [Ionic](https://ionic.io/ionicons)
+* [Moment.js](https://momentjs.com/)
+
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -137,10 +142,6 @@ Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.c
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 -->
 
-<!-- ACKNOWLEDGEMENTS -->
-### Acknowledgements
-* [Ionic](https://ionic.io/ionicons)
-* [Moment.js](https://momentjs.com/)
 
 
 

@@ -69,7 +69,7 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple steps.
 
 ### Installation
 

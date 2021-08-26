@@ -92,10 +92,20 @@ To get a local copy up and running follow these simple steps.
    
 3. Get a free API Key at [Cryptocompare](https://min-api.cryptocompare.com/pricing)
 
-4. Enter your API in `confiq.js`
+4. Enter your Cryptocompare API-key in `LatestNews.js`
    ```JS
-   const API_KEY = 'ENTER YOUR API';
+   const api_key = 'ENTER YOUR API';
    ```
+   &&
+   Enter your Alternative API-key in `Sentiment.js`
+   ```JS
+   const api_key = 'ENTER YOUR API';
+   ```
+   
+5. Start App in terminal:
+   ```expo start```
+   
+   For testing you need to create an emulator or connect your device as a emulator!
 
 
 <!-- USAGE EXAMPLES 

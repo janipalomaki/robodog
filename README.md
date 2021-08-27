@@ -90,7 +90,7 @@ To get a local copy up and running follow these simple steps.
    React  Navigation and Stack module.
    
    
-3. Get a free API Key at [Cryptocompare](https://min-api.cryptocompare.com/pricing)
+3. Get a free API Key at [Cryptocompare](https://min-api.cryptocompare.com/pricing) & [Alternative](https://alternative.me/crypto/api/)
 
 4. Enter your Cryptocompare API-key in `LatestNews.js`
    ```JS

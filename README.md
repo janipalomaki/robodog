@@ -105,7 +105,8 @@ To get a local copy up and running follow these simple steps.
 6. Run 'expo start' in terminal and start exploring RoboDog App!
    ```expo start```
    
-   For testing you need to create an emulator or connect your device as a emulator!
+   For testing you need to create an emulator or connect your device as a emulator. 
+   You find more info about setting up Emulator from [here](https://docs.expo.dev/workflow/android-studio-emulator/)
 
 
 <!-- USAGE EXAMPLES 

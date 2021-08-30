@@ -38,7 +38,7 @@
 <!-- ABOUT THE PROJECT 
 ## About The Project
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+The main reason for this project is to collect all the necessary information about cryptocurrencies in the same place. 
 
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
@@ -62,37 +62,51 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 * [Alternative](https://alternative.me/crypto/api/)
 
 
-<!-- GETTING STARTED 
+### Acknowledgements
+* [Ionic](https://ionic.io/ionicons)
+* [Moment.js](https://momentjs.com/)
+
+
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
--->
+To get a local copy up and running follow these simple steps.
 
 ### Installation
 
-1. Get a free API Key at [Cryptocompare](https://min-api.cryptocompare.com/pricing)
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/janipalomaki/robodog.git
    ```
-3. Install NPM packages
+2. Open a terminal in your project´s folder and run:
    ```sh
-   npm install
+   yarn install 
+   yarn add react-native-paper 
+   yarn add native-base styled-components styled-system 
+   yarn add @react-navigation/native 
+   yarn add @react-navigation/stack 
    ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
+   Commands below will install:
+   All the dependencies listed within package.json in the local node_modules folder, React Native Paper component library, NativeBase component library, 
+   React  Navigation and Stack module.
+   
+   
+3. Get a free API Key at [Cryptocompare](https://min-api.cryptocompare.com/pricing) & [Alternative](https://alternative.me/crypto/api/)
 
+4. Enter your Cryptocompare API-key in `LatestNews.js`
+   ```JS
+   const api_key = 'ENTER YOUR API';
+   ```
+   
+5. Enter your Alternative API-key in `Sentiment.js`
+   ```JS
+   const api_key = 'ENTER YOUR API';
+   ```
+   
+6. Run ```expo start``` in terminal and start exploring RoboDog App!
+   
+   
+   For testing you need to create an emulator or connect your device as a emulator. 
+   More info about setting up Emulator from [here](https://docs.expo.dev/workflow/android-studio-emulator/)
 
 
 <!-- USAGE EXAMPLES 
@@ -139,10 +153,6 @@ Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.c
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
 -->
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [Ionic](https://ionic.io/ionicons)
-* [Moment.js](https://momentjs.com/)
 
 
 

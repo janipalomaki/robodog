@@ -86,7 +86,7 @@ export default function Sentiment () {
                         } else if ( colorValue <= 40) {
                             color = styles.warning;
                         
-                        } else if ( colorValue <= 50) {
+                        } else if ( colorValue <= 52) {
                             color = styles.neutral;
                         
                         } else {
@@ -159,7 +159,8 @@ const styles = StyleSheet.create({
         backgroundColor : "orange"
     },
     neutral : {
-        backgroundColor : "yellow"
+        backgroundColor : "yellow",
+        color : "black"
     },
     success : {
         backgroundColor : "green"

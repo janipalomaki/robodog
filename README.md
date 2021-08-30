@@ -47,9 +47,16 @@ With RoboDog app you can follow up:
   <li>Discussions about cryptomarkets from SatoshiStreetBets on Reddit </li>
 </ul>  
 
-This non-profit project is created from the pure interest in cryptocurrencies and you can freely use its code in your projects. <br>
+This project is created from the pure interest in cryptocurrencies and you can freely use its code in your projects. <br>
 You can find more details below about how to run the app on your phone or another emulator.
 
+<div float="left">
+<img src="src/img_github/RoboDog_1.jpg" width="170">
+<img src="src/img_github/RoboDog_2.jpg" width="170">
+<img src="src/img_github/RoboDog_3.jpg" width="170">
+<img src="src/img_github/RoboDog_4.jpg" width="170">
+<img src="src/img_github/RoboDog_5.jpg" width="170">
+</div>
 
 ### Built With
 

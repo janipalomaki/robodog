@@ -35,20 +35,21 @@
 </details>
 -->
 
-<!-- ABOUT THE PROJECT 
 ## About The Project
 
-The main reason for this project is to collect all the necessary information about cryptocurrencies in the same place. 
+The main reason for this project is to collect all the important information about cryptocurrencies in the same place. <br>
+With RoboDog app you can follow up:
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+<ul>
+  <li>CoinMarketCap market data </li>
+  <li>Alternative Fear & Greed Index and analysis </li>
+  <li>Latest crypto news from Cryptocompare </li>
+  <li>Discussions about cryptomarkets from SatoshiStreetBets on Reddit </li>
+</ul>  
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
+This non-profit project is created from the pure interest in cryptocurrencies and you can freely use its code in your projects. <br>
+You can find more details below about how to run the app on your phone or another emulator.
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
--->
 
 ### Built With
 

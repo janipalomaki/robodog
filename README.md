@@ -60,7 +60,7 @@ You can find more details below about how to run the app on your phone or anothe
 <img src="src/img_github/RoboDog_5.jpg" width="150">
 </div>
 
-### Built With
+## Built With
 
 * [Expo](https://docs.expo.io/)
 * [React Native](https://reactnative.dev/)

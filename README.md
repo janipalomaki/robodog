@@ -50,6 +50,8 @@ With RoboDog app you can follow up:
 This project is created from the pure interest in cryptocurrencies and you can freely use its code in your projects. <br>
 You can find more details below about how to run the app on your phone or another emulator.
 
+## Usage
+
 <div float="left">
 <img src="src/img_github/RoboDog_1.jpg" width="150">
 <img src="src/img_github/RoboDog_2.jpg" width="150">
@@ -115,16 +117,7 @@ To get a local copy up and running follow these simple steps.
    
    For testing you need to create an emulator or connect your device as a emulator. 
    More info about setting up Emulator from [here](https://docs.expo.dev/workflow/android-studio-emulator/)
-
-
-<!-- USAGE EXAMPLES 
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
--->
-
+   
 
 <!-- ROADMAP 
 ## Roadmap
@@ -132,8 +125,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
 -->
 
-
-<!-- CONTRIBUTING 
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -143,14 +134,11 @@ Contributions are what make the open source community such an amazing place to b
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
--->
 
 
-<!-- LICENSE 
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
--->
 
 
 <!-- CONTACT 

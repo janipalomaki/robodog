@@ -1,8 +1,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h3 align="center">RoboDog</h3>
-  <h5 align="center">Cryptomarket tracker</h5>
+  <h1 align="center">RoboDog</h1>
+  <h4 align="center">Cryptomarket tracker</h4>
 </p>
 
 

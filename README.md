@@ -14,6 +14,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#usage">Usage</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -25,7 +26,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-     <li><a href="#usage">Usage</a></li>
+     
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -98,7 +99,7 @@ To get a local copy up and running follow these simple steps.
    ```
    Commands below will install:
    All the dependencies listed within package.json in the local node_modules folder, React Native Paper component library, NativeBase component library, 
-   React  Navigation and Stack module.
+   React Navigation and Stack module.
    
    
 3. Get a free API Key at [Cryptocompare](https://min-api.cryptocompare.com/pricing) & [Alternative](https://alternative.me/crypto/api/)

@@ -1,7 +1,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <h3 align="center">RoboDog</h3>
+  <h1 align="center">RoboDog</h1>
+  <h4 align="center">Cryptomarket tracker</h4>
 </p>
 
 
@@ -13,6 +14,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#usage">Usage</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -24,7 +26,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-     <li><a href="#usage">Usage</a></li>
+     
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -47,11 +49,20 @@ With RoboDog app you can follow up:
   <li>Discussions about cryptomarkets from SatoshiStreetBets on Reddit </li>
 </ul>  
 
-This non-profit project is created from the pure interest in cryptocurrencies and you can freely use its code in your projects. <br>
+This project is created from the pure interest in cryptocurrencies and you can freely use its code in your projects. <br>
 You can find more details below about how to run the app on your phone or another emulator.
 
+## Usage
 
-### Built With
+<div float="left">
+<img src="src/img_github/RoboDog_1.jpg" width="150">
+<img src="src/img_github/RoboDog_2.jpg" width="150">
+<img src="src/img_github/RoboDog_3.jpg" width="150">
+<img src="src/img_github/RoboDog_4.jpg" width="150">
+<img src="src/img_github/RoboDog_5.jpg" width="150">
+</div>
+
+## Built With
 
 * [Expo](https://docs.expo.io/)
 * [React Native](https://reactnative.dev/)
@@ -88,7 +99,7 @@ To get a local copy up and running follow these simple steps.
    ```
    Commands below will install:
    All the dependencies listed within package.json in the local node_modules folder, React Native Paper component library, NativeBase component library, 
-   React  Navigation and Stack module.
+   React Navigation and Stack module.
    
    
 3. Get a free API Key at [Cryptocompare](https://min-api.cryptocompare.com/pricing) & [Alternative](https://alternative.me/crypto/api/)
@@ -108,16 +119,7 @@ To get a local copy up and running follow these simple steps.
    
    For testing you need to create an emulator or connect your device as a emulator. 
    More info about setting up Emulator from [here](https://docs.expo.dev/workflow/android-studio-emulator/)
-
-
-<!-- USAGE EXAMPLES 
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
--->
-
+   
 
 <!-- ROADMAP 
 ## Roadmap
@@ -125,8 +127,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
 -->
 
-
-<!-- CONTRIBUTING 
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -136,14 +136,11 @@ Contributions are what make the open source community such an amazing place to b
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
--->
 
-
-<!-- LICENSE 
+<!--
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
--->
 
 
 <!-- CONTACT 

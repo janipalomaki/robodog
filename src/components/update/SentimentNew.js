@@ -114,10 +114,10 @@ export default function SentimentNew () {
                             </Left>
                             <Body>
                                 <Text style={styles.value_classification}>{sentiment.value_classification}</Text> 
-                                <Text note style={styles.time}>{time} ({updated})</Text>
+                                <Text note style={styles.time}>Updated {updated}</Text>
                             </Body>
                             <Right>
-                            <Text style={styles.infoText}>{info}</Text>
+                            <Text style={styles.infoText}>{time}</Text>
                             </Right>
                         </ListItem>
                         )    
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
         backgroundColor : "orange"
     },
     neutral : {
-        backgroundColor : "yellow"
+        backgroundColor : "orange",
     },
     success : {
         backgroundColor : "green"

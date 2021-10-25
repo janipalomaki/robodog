@@ -109,7 +109,7 @@ To get a local copy up and running follow these simple steps.
    const api_key = 'ENTER YOUR API';
    ```
    
-  Enter your Alternative API-key in `Sentiment.js`
+   Enter your Alternative API-key in `Sentiment.js`
    ```JS
    const api_key = 'ENTER YOUR API';
    ```

@@ -109,12 +109,12 @@ To get a local copy up and running follow these simple steps.
    const api_key = 'ENTER YOUR API';
    ```
    
-5. Enter your Alternative API-key in `Sentiment.js`
+  Enter your Alternative API-key in `Sentiment.js`
    ```JS
    const api_key = 'ENTER YOUR API';
    ```
    
-6. Run ```expo start``` in terminal and start exploring RoboDog App!
+5. Run ```expo start``` in terminal and start exploring RoboDog App!
    
    
    For testing you need to create an emulator or connect your device as a emulator. 

@@ -50,7 +50,7 @@ With RoboDog app you can follow up:
 </ul>  
 
 This project is created from the pure interest in cryptocurrencies and you can freely use its code in your projects. <br>
-You can find more details below about how to run the app on your phone or another emulator.
+You can find more details below about how to run the app on your phone or another emulator. You can also build standalone app for your phone by creating apk-file in Expo! Read more instructions below.
 
 ## Usage
 
@@ -119,6 +119,10 @@ To get a local copy up and running follow these simple steps.
    
    For testing you need to create an emulator or connect your device as a emulator. 
    More info about setting up Emulator from [here](https://docs.expo.dev/workflow/android-studio-emulator/)
+   
+6. Build standalone RoboDog App!
+   
+   More info about building standalone app from [here](https://docs.expo.dev/classic/building-standalone-apps/)
    
 
 <!-- ROADMAP 

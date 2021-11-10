@@ -49,7 +49,7 @@ With RoboDog app you can follow up:
   <li>Discussions about cryptomarkets from SatoshiStreetBets on Reddit </li>
 </ul>  
 
-This project is created from the pure interest in cryptocurrencies and you can freely use its code in your projects. <br>
+This project is created from the pure interest in cryptocurrencies. <br>
 You can find more details below about how to run the app on your phone or another emulator. You can also build standalone app for your phone by creating apk-file in Expo! Read more instructions below.
 
 ## Usage

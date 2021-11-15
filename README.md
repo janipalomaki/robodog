@@ -43,7 +43,7 @@ The main reason for this project is to collect all the important information abo
 With RoboDog app you can follow up:
 
 <ul>
-  <li>CoinMarketCap market data </li>
+  <li>CoinMarketCap -market data </li>
   <li>Alternative Fear & Greed Index and analysis </li>
   <li>Latest crypto news from Cryptocompare </li>
   <li>Discussions about cryptomarkets from SatoshiStreetBets on Reddit </li>
